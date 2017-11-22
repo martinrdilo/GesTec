@@ -14,4 +14,4 @@ Explicando funcionalidades: Primero vamos a probar como sería la visualización
                 -Posibilidad de cobrar por el servicio de una manera facil y rapida. Rapipago, Paypal.
                 -Teniendo en cuenta el sist. de jerarquias un supervisor puede revisar un trabajo y asignar cuantos tecnicos necesite
                 -Utilizar facturas electronicas para los registros de ventas
-                -Integrar un sistema de calificaciones y opiniones de empresas separadas por rubro, que sirvan para que el cliente de cualquier emrpesa que use el sistema, pueda encontrar otra empresa o taller de otro rubro.G
+                -Integrar un sistema de calificaciones y opiniones de empresas separadas por rubro, que sirvan para que el cliente de cualquier emrpesa que use el sistema, pueda encontrar otra empresa o taller de otro rubro.
