@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Roboto" rel="stylesheet">
     <!--Estilos-->
     <!--<link rel="stylesheet" href="css/reset.css">-->
-    <link rel="stylesheet" href="assets/materialize.css">
+    <link rel="stylesheet" href="assets/css/materialize.css">
     <link rel="stylesheet" href="assets/css/mtrlz.css" type="text/css" />
     
     <!--SCRIPT-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	  <script src="../js/materialize.js"></script>
+	  <script src="js/materialize.js"></script>
 </head>
 <body>
 	<header>
