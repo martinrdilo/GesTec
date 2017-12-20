@@ -118,51 +118,80 @@
 	</script>
 	
 </head>
+
+
 <body>
     <div class="row">
         <header class="col s12 m12 l12 empresa orange">
                <div id="nav">
                    <div class="navbar-fixed">
+                        <!-- Dropdown ESTRUCTURA -->
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li class="blue-grey lighten-5"><h6>&nbsp; Tienes 3 notificaciones nuevas &nbsp; </h6></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">Alberto tiene una consulta.. </a></li>
+                            <li><a href="#!">Martin no esta de acuerdo..</a></li>
+                            <li><a href="#!">Recibio un mensaje de..</a></li>
+                            <li><a href="#!">Faltan 6 dias para..</a></li>
+                        </ul>
                         <nav class="orange">
-                            <div class="row">
+                            <div class="nav-wrapper">
+                                <a href="?p=vista-admin" class="brand-logo">GesTec</a>
+                                <ul class="right hide-on-small-only">
+                                  
+                                    <?php if($_REQUEST["p"] != "vista-admin") :  ?>
+                                        <li><a href="?p=vista-admin"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Volver">reply</i></a></li>
+                                    <?php endif; ?>
+                                    <?php if($_REQUEST["p"] != "vista-cliente") : ?>
+                                        <li><a href="?p=nuevo-cliente"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Agregar cliente">person_add</i></a></li>
+                                    <?php endif; ?>
+                                    <li><a href="?p=lista-clientes"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Lista de clientes">person</i></a></li>
+                                    <li><a href="?p=nueva-orden"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Nueva orden">note_add</i></a></li>
+                                    <li><a href="?p=consulta-admin"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Consulta">email</i></a></li>
+                                    <li><span>│</span></li>
+                                    <li> <!-- Dropdown NOTIFICACIONES --> <a class="dropdown-button orange"  href='#' data-activates="dropdown1" data-constrainwidth="false"><i class="material-icons tooltipped" data-position="buttom" data-delay="100" data-tooltip="Notificaciones">notifications_active</i></a></li>
+                                    <li><a href="#"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Cuenta">account_circle</i></a></li>
+                                    <li><a href="#"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Ayuda">help_outline</i></a></li>
+                                    <li><a href="?p=logout"><i class="material-icons right tooltipped" data-position="buttom" data-delay="50" data-tooltip="Cerrar Sesión">exit_to_app</i></a></li>
+
+                                    
+
+
+
+                                </ul>
+                                
+                                <!--
                                 <div class="nav-wrapper container left col l2 hide-on-small-only">
                                     <a href="?=empresa" class="brand-logo">GesTec</a>
                                 </div>
                                 <div class="nav-wrapper container col s4 m4 offset-l4 l3 ">
                                     <div class="row">
     
-                                        <?php
-                                        if($_REQUEST["p"] != "vista-admin"){
-                                        ?>
-                                        <div id="filauno" class="col s3 m2 offset-l4 l2 tooltipped iconEm" data-position="buttom" data-delay="50" data-tooltip="Volver"><a href="?p=vista-admin"><span class="icon-primero"><i class="material-icons right">reply</i></span><span class="icon-primero"><i class="material-icons right cyan-text text-darken-4" style="display: none">reply</i></span></a></div>
+                                        <?php if($_REQUEST["p"] != "vista-admin") :  ?>
+                                            <div id="filauno" class="col s3 m2 offset-l4 l2 tooltipped iconEm" data-position="buttom" data-delay="50" data-tooltip="Volver"><a href="?p=vista-admin"><span class="icon-primero"><i class="material-icons right">reply</i></span><span class="icon-primero"><i class="material-icons right cyan-text text-darken-4" style="display: none">reply</i></span></a></div>
                                         
-                                        <?php
-                                        }
+                                        <?php endif; ?>
+                                        <?php if($_REQUEST["p"] != "vista-cliente") : ?>
+                                            <div class="col s3 m2 offset-l4 l2 tooltipped iconEm" data-position="buttom" data-delay="50" data-tooltip="Agregar cliente"><a href="?p=nuevo-cliente"><span class="icon-primero"><i class="material-icons right">person_add</i></span><span class="icon-primero"><i class="material-icons right cyan-text text-darken-4" style="display: none">person_add</i></span></a></div>
                                         
-                                        else if($_REQUEST["p"] != "vista-cliente") {
-                                            
-                                        ?>
-                                        <div class="col s3 m2 offset-l4 l2 tooltipped iconEm" data-position="buttom" data-delay="50" data-tooltip="Agregar cliente"><a href="?p=nuevo-cliente"><span class="icon-primero"><i class="material-icons right">person_add</i></span><span class="icon-primero"><i class="material-icons right cyan-text text-darken-4" style="display: none">person_add</i></span></a></div>
-                                        
-                                        <?php
-                                        }
-                                        
-                                        ?>
+                                        <?php endif; ?>
                                         <div id="filados" class="col s3 m2 l2 tooltipped iconEm2" data-position="buttom" data-delay="50" data-tooltip="Lista de clientes"><a href="?p=lista-clientes"><span class="icon-segundo"><i class="material-icons right">person</i></span><span class="icon-segundo"><i class="material-icons right cyan-text text-darken-4" style="display: none">person</i></span></a></div>
                                         
                                         <div id="filatres" class="col s3 m2 l2 tooltipped iconEm3" data-position="buttom" data-delay="50" data-tooltip="Nueva orden"><a href="?p=nueva-orden"><span class="icon-tercero"><i class="material-icons right">note_add</i></span><span class="icon-tercero"><i class="material-icons right cyan-text text-darken-4" style="display: none">note_add</i></span></a></div>
+
+
                                         <div id="filacuatro" class="col s3 m2 l2 tooltipped iconEm4" data-position="buttom" data-delay="50" data-tooltip="Consulta"><a href="?p=consulta-admin"><span class="icon-cuarto"><i class="material-icons right">email</i></span><span class="icon-cuarto"><i class="material-icons right cyan-text text-darken-4" style="display: none">email</i></span></a></div>
 
                                     </div>
                                 </div>
                                 <div class="nav-wrapper container col offset-s2 s6 offset-m2 m6 l3">
                                     <div class="row">
-                                        <span class="col offset-l2 l1 hide-on-med-and-down">│</span>
                                         
-                                        <!-- Dropdown NOTIFICACIONES -->
+                                        
+                                        <!- Dropdown NOTIFICACIONES ->
                                         <div class="col offset-s1 s2 offset-m4 m1 l2 tooltipped hide-on-small-only" data-position="buttom" data-delay="100" data-tooltip="Notificaciones"><a class="dropdown-button orange" href='#' data-activates="dropdown1" data-constrainwidth="false"><i class="material-icons" style="display:none;">notifications</i><span class="new badge red">3</span><i class="material-icons">notifications_active</i></a></div>
 
-                                        <!-- Dropdown ESTRUCTURA -->
+                                        <!- Dropdown ESTRUCTURA ->
                                         <ul id="dropdown1" class="dropdown-content">
                                             <li class="blue-grey lighten-5"><h6>&nbsp; Tienes 3 notificaciones nuevas &nbsp; </h6></li>
                                             <li class="divider"></li>
@@ -172,10 +201,13 @@
                                             <li><a href="#!">Faltan 6 dias para..</a></li>
                                         </ul>
                                         <div class="col offset-s5 s2 m2 l1 tooltipped iconEm5" data-position="buttom" data-delay="50" data-tooltip="Cuenta"><a href="?="><span class="icon-quinto"><i class="material-icons right">account_circle</i></span><span class="icon-quinto"><i class="material-icons right cyan-text text-darken-4" style="display: none">account_circle</i></span></a></div>
+
                                         <div class="col s2 m2 l2 tooltipped iconEm7" data-position="buttom" data-delay="50" data-tooltip="Ayuda"><a href="?="><span class="icon-septimo"><i class="material-icons right">help_outline</i></span><span class="icon-septimo"><i class="material-icons right cyan-text text-darken-4" style="display: none">help</i></span></a></div>
+
                                         <div class="col s2 m2 l2 tooltipped iconEm6" data-position="buttom" data-delay="50" data-tooltip="Salir"><a href="?p=logout"><span class="icon-sexto"><i class="material-icons right">exit_to_app</i></span><span class="icon-sexto"><i class="material-icons right cyan-text text-darken-4" style="display: none">exit_to_app</i></span></a></div>
                                     </div>
                                 </div>
+                            -->
                             </div>
                         </nav>
                     </div>
@@ -197,7 +229,7 @@
         
               
               
-        
+        /*
         $(".iconEm").on("click", function() {
             $(".icon-primero > i").toggle();
             if ($(this).attr("active")){
@@ -246,7 +278,7 @@
                 
             }
         });
-        
+        */
         });
 
 </script>

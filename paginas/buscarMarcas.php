@@ -11,5 +11,5 @@ $select_marca = "SELECT DISTINCT productos.marca FROM productos
                                                  AND marca like '%".$search_marca."%'  ORDER BY marca DESC";
 $consulta = mysqli_query($conexion, $select_marca) or die(mysqli_error($conexion));
 while ($lista_marca = mysqli_fetch_array($consulta)) : ?>
-    <div class="suggest-element"><a data="'.$lista_marca['marca'].'" class="marca"><?= utf8_encode($lista_marca['marca']) ?></a></div>
+    <div class="suggest-element"><a data=<?= $lista_marca['marca']; ?> class="marca"><?= utf8_encode($lista_marca['marca']); ?></a></div>
 <?php endwhile; ?>

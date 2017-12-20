@@ -31,14 +31,14 @@ $(document).ready(function() {
             };
             
             $.ajax({
-                url:'../paginas/modificar-orden.php',
+                url:'paginas/modificar-orden.php',
                 type: 'POST',
                 data: ajax_data,
                 
                 })
                 .done(function(data){
                     //location.replace('?p=empresa');
-                   setTimeout(location.reload.bind(location), 100);
+                   //setTimeout(location.reload.bind(location), 100);
                     console.log("Orden modificada con éxito");
                 })
                 .fail(function(XMLHttpRequest, textStatus, errorThrown) { 
@@ -102,7 +102,7 @@ $(".opcion3").on("click", function() {
         e.preventDefault();
         var idOrden = $(this).attr("data-id");
         $.ajax({
-                url:'../paginas/aceptar-orden.php',
+                url:'paginas/aceptar-orden.php',
                 type: 'POST',
                 data: {idOrden:idOrden}
                 
@@ -127,7 +127,7 @@ $(".opcion3").on("click", function() {
         e.preventDefault();
         var idOrden = $(this).attr("data-id");
         $.ajax({
-                url:'../paginas/rechazar-orden.php',
+                url:'paginas/rechazar-orden.php',
                 type: 'POST',
                 data: {idOrden:idOrden}
                 
@@ -176,7 +176,7 @@ $(".opcion3").on("click", function() {
            //console.log(pass);
            if (user.length > 0 && password.length > 0){
                $.ajax({
-                    url:'../paginas/orden-ingresada.php',
+                    url:'paginas/orden-ingresada.php',
                 	type: 'POST',
                 	 data: ajax_data,
                 })

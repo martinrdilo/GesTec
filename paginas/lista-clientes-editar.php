@@ -20,8 +20,9 @@
             
     <!-- BOTON BORRAR ORDEN DE TRABAJO -->        
             
-            <td><a class="btn modal-trigger red delete" onClick="borrar(<?= $cliente["idUsuario"] ?>)"><i class="large material-icons">delete</i></a>
-    
+            <td><a class="btn modal-trigger" href="?p=editar-cliente&id=<?= $cliente["idUsuario"];?>">EDITAR</a>
+            <!-- <td><a class="btn modal-trigger red delete" onClick="borrar(<?= $cliente["idUsuario"] ?>)"><i class="large material-icons">delete</i></a>
+            -->
     
                 
             </td>

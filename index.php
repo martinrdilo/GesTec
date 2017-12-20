@@ -18,7 +18,7 @@ if ($pagina == 'login') {
     require_once('paginas/header/headermin.php');
  }else if ($pagina == 'vista-cliente' or $pagina == 'consulta' ){
     require_once('paginas/header/headercliente.php');
-} else if ($pagina == 'vista-admin' or $pagina == 'nueva-orden' or $pagina == 'nuevo-cliente' or $pagina == 'vista-cliente' or $pagina == 'enviar-wapp' or $pagina == 'lista-clientes' or $pagina == 'lista-ordenes-cliente' or $pagina == 'consulta-admin') {
+} else if ($pagina == 'vista-admin' or $pagina == 'nueva-orden' or $pagina == 'nuevo-cliente' or $pagina == 'editar-cliente' or $pagina == 'enviar-wapp' or $pagina == 'lista-clientes' or $pagina == 'lista-ordenes-cliente' or $pagina == 'consulta-admin') {
     require_once('paginas/header/headeradmin.php');
 } else {
     require_once('paginas/header/header.php');

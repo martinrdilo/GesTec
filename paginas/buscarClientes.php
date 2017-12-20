@@ -13,7 +13,7 @@ $select_cliente = "SELECT U.nombre, U.apellido,U.idUsuario FROM usuarios U
 $consulta = mysqli_query($conexion, $select_cliente) or die(mysqli_error($conexion));
 while ($lista_cliente = mysqli_fetch_array($consulta)) : ?>
     <div class="suggest-element">
-		<a data="'.$lista_cliente['apellido'].', '.$lista_cliente['nombre'].'" class="cliente"><?= utf8_encode($lista_cliente['apellido']) .', '.  utf8_encode($lista_cliente['nombre']) ?></a>
-		<input type="hidden" name="idCliente" id="idCliente" value="'.$lista_cliente['idUsuario'].'"> 
+		<a data=<?= $lista_cliente['apellido'].', '.$lista_cliente['nombre']; ?> class="cliente"><?= utf8_encode($lista_cliente['apellido']) .', '.  utf8_encode($lista_cliente['nombre']) ?></a>
+		<input type="hidden" name="idCliente" id="idCliente" value=<?= $lista_cliente['idUsuario']; ?> > 
 	</div>
 <?php endwhile; ?>

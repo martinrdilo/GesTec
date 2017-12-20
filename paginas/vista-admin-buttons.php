@@ -4,7 +4,7 @@
     $rsEstados = mysqli_query($conexion, $sqlEstados);
 
     //Traigo todos los tipos de trabajos que sean distintos al que hay guardado en la orden actualmente
-    $sqlTipos = "SELECT idTipo, nombreTipoOrd FROM ordenes_tipos WHERE idTipo != '".$orden["idTipo"]."'"; 
+    $sqlTipos = "SELECT idTipo, nombreTipoOrd FROM ordenes_tipos WHERE idTipo != '".$orden["idTipo"]."' "; 
     $rsTipos = mysqli_query($conexion, $sqlTipos);
 
 ?>
@@ -12,7 +12,7 @@
 
 <!-- COLUMNA VER DETALLE DE ORDEN -->
 <td>
-    <a class="btn modal-trigger" href="#modal<?= $orden["idOrden"]; ?>">VER</a>
+    <a class="btn modal-trigger" href="#modal<?=$orden["idOrden"]?>">VER</a>
     <!-- Modal Structure VER DETALLE TRABAJO -->
     <div id="modal<?= $orden["idOrden"]; ?>" class="modal">
         <div class="modal-content black-text">
@@ -114,7 +114,7 @@
                     <div class="input-field">
                         <!--<input name="descripcion" class="descripcion" type="text" value="">-->
                         <!--<label for="descripcion">Descripcion</label>-->
-                        <textarea name="descripcion" id="descripcion" class="materialize-textarea descripcion" data-length="150"><?= $orden["descripcion"] ?></textarea>
+                        <textarea name="descripcion" id="descripcion" class="materialize-textarea descripcion" data-length="350"><?= $orden["descripcion"] ?></textarea>
                         <label for="descripcion">Descripcion</label>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="col s12 l8">
                     <div class="input-field">
-                        <textarea class="materialize-textarea diagnostico" id="diagnostico" name="diagnostico" data-length="150" ><?= $orden["diagnostico"] ?></textarea>
+                        <textarea class="materialize-textarea diagnostico" id="diagnostico" name="diagnostico" data-length="350" ><?= $orden["diagnostico"] ?></textarea>
                         <label for="diagnostico">Diagnostico</label>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                     <div class="input-field">
                         <!--<input name="solucion" class="solucion" type="text" value="">-->
                         <!--<label for="solucion">Solucion</label>-->
-                        <textarea name="solucion" id="solucion" class="materialize-textarea solucion" data-length="150"><?= $orden["solucion"] ?></textarea>
+                        <textarea name="solucion" id="solucion" class="materialize-textarea solucion" data-length="350"><?= $orden["solucion"] ?></textarea>
                         <label for="solucion">Solucion</label>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="actualizar modal-close waves-effect waves-green btn-flat hovered" data-id="<?= $orden["idOrden"]; ?>">Actualizar</button>
+            <button type="button" class="actualizar modal-close waves-effect waves-green btn-flat hovered" data-id="<?=$orden["idOrden"]?>">Actualizar</button>
             <a href="#!" class="modal-action modal-close waves-effect btn-flat">Cerrar</a>
         </div>
     </div>

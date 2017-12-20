@@ -17,7 +17,7 @@
           						<label for="user">Usuario</label>
         					</div>
         					<div class="input-field col s12 offset-m3 m6 offset-l4 l3">
-          						<input id="password" name="password" type="password" class="validate" pattern="[A-Za-z\d]{1,30}">
+          						<input id="password" name="password" type="password" class="validate" pattern="[A-Za-z\d][0-9\.\,\-]{6,30}">
          					    <label for="password">Password</label>
        						</div>
        						<span class="col offset-s3 s8 offset-m5 m7 offset-l4 l3" id="result"></span>

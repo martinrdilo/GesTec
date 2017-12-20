@@ -1,6 +1,6 @@
 <?php
     //Selecciono los usuarios que sean clientes del admin logueado.
-    //Mientras el admin logueado tenga clientes en tabla admin_clientes, traeme todos mientras el idCliente sea un Usuario de tipo 3 y ademas coincida con idUsuario de tabla usuarios    
+    //Mientrphpas el admin logueado tenga clientes en tabla admin_clientes, traeme todos mientras el idCliente sea un Usuario de tipo 3 y ademas coincida con idUsuario de tabla usuarios    
     $sqlClientes = "SELECT U.* FROM usuarios U JOIN admins_clientes AC 
                             ON '".$_SESSION["idUsuario"]."' = AC.idAdmin
                            WHERE AC.idCliente = U.idUsuario";   
@@ -40,11 +40,11 @@
                                             <th>Nombre</th>
                                             <th>Apellido</th>
                                             <!--<th>Direccion</th>-->
-                                            <th>Email</th>
                                             <th>Nombre de usuario</th>
+                                            <th>Telefono</th>
                                             <th>Agregar orden</th>
                                             <th>Lista Ordenes</th>
-                                            <th>Eliminar usuario</th>
+                                            <th>Editar usuario</th>
                                         <!--    <th>Eliminar</th>  -->
                                         </tr>
                                     </thead>
@@ -53,10 +53,10 @@
                                         <?php while ($cliente = mysqli_fetch_array($rsClientes)) : ?>
                                             <tr> 
                                                 <!--<td><?php// echo $cliente["idUsuario"] ?></td>-->
-                                                <td><?php echo $cliente["nombre"] ?></td>
-                                                <td><?php echo $cliente["apellido"] ?></td>
-                                                <td><?php echo $cliente["email"] ?></td>
-                                                <td><?php echo $cliente["nombreUsuario"]; ?></td>
+                                                <td><?= $cliente["nombre"] ?></td>
+                                                <td><?= $cliente["apellido"] ?></td>
+                                                <td><?= $cliente["nombreUsuario"]; ?></td>
+                                                <td><?= $cliente["telefono"] ?></td>
                                                 <div>
                                                     <!-- COLUMNAS VER EDITAR TRAIDAS DESDE OTRO ARCHIVO .PHP-->
                                                     <?php include("lista-clientes-editar.php"); ?>

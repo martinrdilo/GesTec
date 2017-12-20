@@ -12,5 +12,5 @@ $select_productos = "SELECT DISTINCT productos.tipo FROM productos
 
 $consulta = mysqli_query($conexion, $select_productos) or die(mysqli_error($conexion));
 while ($lista_productos = mysqli_fetch_array($consulta)) : ?>
-    <div class="suggest-element"><a data="'.$lista_productos['tipo'].'" class="tipo"><?= utf8_encode($lista_productos['tipo']) ?></a></div>
+    <div class="suggest-element"><a data=<?= $lista_productos['tipo']; ?> class="tipo"><?= utf8_encode($lista_productos['tipo']) ?></a></div>
 <?php endwhile; ?>

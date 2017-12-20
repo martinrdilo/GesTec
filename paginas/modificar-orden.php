@@ -1,6 +1,5 @@
 <?php
 	include("conexion.php");
-	session_start();
 	
 	if (isset($_REQUEST["idOrden"])){
 		echo "PHP idOrden: " . $_REQUEST["idOrden"];
@@ -12,11 +11,19 @@
 		                          solucion = '".$_REQUEST["solucion"]."',
 		                          precio = '".$_REQUEST["precio"]."'
 	            WHERE idOrden = '".$_REQUEST["idOrden"]."' ";
-		if (mysqli_query($conexion, $cs)){
-		    echo "Orden modificada con éxito";    
-		}else{
-		    echo mysqli_error();
+		if (mysqli_query($conexion, $cs)){ ?>
+			<p class="echo" data-id="<?= "Orden modificada con éxito: modificar-orden.php" ?>"> </p>  
+		<?php }else{ ?>
+		    <p class="echo" data-id="<?= mysqli_error(); ?>"> </p>
+		<?php
 		}
 	}
 	
 ?>
+
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	var result = $('.echo').attr("data-id");
+	    	console.log(result);
+	    	});
+	</script>
