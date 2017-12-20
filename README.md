@@ -1,4 +1,5 @@
-Se puede probar ingresando con usuario: empresa password: 123
+Se puede probar ingresando con usuario: empresa 
+                               password: 123
 
 Introducción: El sistema GesTec es un gestor de reparaciones. Donde empresas, talleres o profesionales de cualquier area podrán administrar sus órdenes de trabajo y sus clientes. Les permitirá organizar y editar dicha información de una manera rápida y sencilla. Este sistema surge a partir de pensar en mini empresas o talleres que no tengan una organización de sus trabajos y clientes de forma digital y quieran comenzar a utilizar un sistema, sencillo y fácil de manejar. En muchas ocasiones uno visita un taller mecánico, un taller de servicio técnico de electrónica o computadoras, una mini empresa (pymes) que realizen trabajos gráficos, profesionales que se dediquen a diseñar, a pintar, a la herrería, etc. y en muchas ocasiones uno puede observar que no tienen una buena organización de sus anotaciones, de los trabajos. Si se anota siempre en papel, hay que ser extremadamente organizado para no perder nunca un teléfono o nombre de un cliente, o un presupuesto, o cualquier otra información. Con un sistema digital se pondrían simplificar en gran parte la organización de la información de los trabajos y clientes de una empresa. 
 
